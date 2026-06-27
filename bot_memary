@@ -1,0 +1,26 @@
+import json
+
+#add paisa
+#sabstract paisa
+#show
+#total
+user_name =  input("enter your name :")
+cash = int(input("enter your cash amount :"))#cash
+
+data = {
+    "name" : user_name,
+    "cash" : cash
+    }
+#save
+# with open("data.json","w") as file :
+#     json.dump(data,file)
+
+with open("data.json","a") as file :
+    json.dump(data,file,indent = 4)
+ 
+#read
+with open("data.json","r") as file:
+    data = json.load(file)
+
+
+print(data)
